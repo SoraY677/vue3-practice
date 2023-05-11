@@ -1,0 +1,19 @@
+{
+  "name": "vue3-practice",
+  "version": "1.0.0",
+  "scripts": {
+    "setup": "run-s setup:*",
+    "setup:self": "yarn install",
+    "setup:client": "yarn --cwd client setup",
+    "dev": "run-p dev:*",
+    "dev:client": "yarn --cwd client dev",
+    "build": "run-s build:*",
+    "build:client": "yarn --cwd client build"
+  },
+  "repository": "git@github.com:SoraY677/vue3-practice.git",
+  "author": "soray677 <soray677@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
