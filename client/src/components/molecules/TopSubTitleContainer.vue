@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-<h1>
-    <top-sub-title :text="props.text"/>
-</h1>
+<h2>
+    <top-sub-title :text="props.text" class="text-xl"/>
+</h2>
 </template>

@@ -9,5 +9,5 @@ const props = defineProps({
 </script>
 
 <template>
-    <span class="text-2xl">{{ props.text }}</span>
+    <span class="text-4xl">{{ props.text }}</span>
 </template>
