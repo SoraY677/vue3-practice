@@ -15,7 +15,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="text-center">
+    <div class="text-center font-crimson">
         <top-main-title-container :text="props.mainTitle"/>
         <top-sub-title-container :text="props.subTitle" />
     </div>
