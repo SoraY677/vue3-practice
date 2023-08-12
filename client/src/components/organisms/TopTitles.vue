@@ -34,7 +34,7 @@ const ruleList = [
         <top-main-title-container :text="props.mainTitle" class="mb-2"/>
         <top-sub-title-container :text="props.subTitle" />
         <good-button class="mt-2"/>
-        <rule-list-vue class="mt-2 mx-2" :rules="ruleList"/>
+        <rule-list-vue class="mt-4 mx-2" :rules="ruleList"/>
     </div>
     
 </template>

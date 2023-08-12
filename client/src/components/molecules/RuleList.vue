@@ -10,13 +10,17 @@ const props = defineProps({
         required: true
     }
 })
+
+function createTitle(index: number, title: string):string {
+    return `${index + 1}.${title}`
+}
 </script>
 
 <template>
     <ul class="flex justify-around flex-wrap gap-2">
-        <li v-for="item in props.rules" class=" basis-[320px] flex-shrink-[1]">
+        <li v-for="(item, index) in props.rules" class="basis-[320px] flex-shrink-[1]">
             <RuleCard 
-             :title="item.title"
+             :title="createTitle(index,item.title)"
              :content="item.content"
             />
         </li>
