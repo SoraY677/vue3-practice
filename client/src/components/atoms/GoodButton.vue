@@ -21,7 +21,7 @@ const counter = computed({
     set: ():void => {}
 })
 
-const activateClass = computed(() => {
+const buttonClassObj = computed(() => {
     return {
         'bg-slate-800': isOverCount10(),
         'text-slate-500': isOverCount10()
@@ -31,7 +31,11 @@ const activateClass = computed(() => {
 </script>
 
 <template>
-    <button aria-label="good" @click="increment" :disabled="isOverCount10()" class="py-1 bg-slate-400 min-w-[120px] rounded-lg" :class="activateClass">
+    <button aria-label="good"
+     @click="increment"
+     :disabled="isOverCount10()"
+     class="py-1 bg-slate-400 min-w-[120px] rounded-lg"
+     :class="buttonClassObj">
         {{ counter }}
     </button>
 </template>
