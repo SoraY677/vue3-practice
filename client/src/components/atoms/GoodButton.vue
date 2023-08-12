@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {onMounted, onUpdated, ref} from 'vue'
+import {computed, onMounted, onUpdated, ref} from 'vue'
 
 const count = ref(0)
 function increment() {
@@ -14,12 +14,17 @@ onMounted(() => {
 onUpdated(() => {
     console.log(`counter updated! current count = ${count.value}`)
 })
-
+const counter = computed({
+    get: () => {
+        return `${String.fromCodePoint(Math.floor(Math.random() * 1791) + 127744)} ${count.value}`
+    },
+    set: ():void => {}
+})
 </script>
 
 <template>
     <button aria-label="good" @click="increment" :disabled="isOverCount10()" class="py-1 bg-slate-400 min-w-[120px] rounded-lg">
-        👍{{ count }}
+        {{ counter }}
     </button>
 </template>
 
