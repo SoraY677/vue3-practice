@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        crimson: ["Crimson Text"],
+        basic: ["Crimson Text", "Rampart One"],
       },
     },
   },
