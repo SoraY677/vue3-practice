@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import GoodButton from '@atoms/GoodButton.vue';
+import NowTimeVue from '@atoms/NowTime.vue';
 import TopMainTitleContainer from '@molecules/TopMainTitleContainer.vue';
 import TopSubTitleContainer from '@molecules/TopSubTitleContainer.vue';
 
@@ -17,6 +18,7 @@ const props = defineProps({
 
 <template>
     <div class="text-center font-crimson">
+        <NowTimeVue />
         <top-main-title-container :text="props.mainTitle" class="mb-2"/>
         <top-sub-title-container :text="props.subTitle" />
         <good-button class="mt-2"/>
